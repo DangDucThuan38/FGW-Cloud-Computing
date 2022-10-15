@@ -13,8 +13,9 @@ var app = express();
 
 
 var mongoose = require("mongoose");
+var url="mongodb+srv://Dangthuan38:Thuan0308*@cluster0.0terhnf.mongodb.net/project1644";
 
-var url="mongodb://127.0.0.1:27017/project";
+//var url="mongodb://127.0.0.1:27017/project";
 mongoose.connect(url, { useNewUrlParser: true }, (err) => {
   if (err) {
     console.log(err);
