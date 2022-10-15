@@ -46,6 +46,7 @@
     <thead>
         
         <tr>
+          <th>Code product</th>
             <th>Name Product</th>
             <th>Image</th>
             <th> Price</th>
@@ -58,7 +59,8 @@
  
     {{#each product }}
    <tr>
-   <td><h5>{{name}}</h5></td>
+    <td><a>{{code}}</a></td>
+   <td><a>{{name}}</a></td>
     <td>
         <a href="/detail/{{_id}}">
             <img src="{{image}}" width="180" height="180">
