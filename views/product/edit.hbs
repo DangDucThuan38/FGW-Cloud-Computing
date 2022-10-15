@@ -1,0 +1,98 @@
+<div class="container col-md-10">
+  <form
+    class="card p-3 bg-light text-center mt-3 mb-3"
+    href="/edit/{{_id}}"
+    method="post"
+  >
+    <h2 class="text-bg-success">Edit product</h2>
+    <div class="form-group">
+      <label class="h3 text-secondary">Name Product</label>
+      <input type="text" name="name" class="form-control" value="{{product.name}}"
+    
+      /></div>
+ <div class="form-group">
+      <label class="h3 text-secondary">Where production</label>
+      <input type="text" name="made" class="form-control" required  value="{{product.made}}"/></div>
+    <div class="form-group">
+    <div class="form-group">
+      <label class="h3 text-secondary">Date of manufacture</label>
+      <input type="date" name="date" class="form-control" required  value="{{dateFormat product.date 'YYYY-MM-DD'}}"/></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Price of product</label>
+      <input type="number" name="price" class="form-control" required value="{{product.price}}" /></div>
+    <div class="form-group">
+      <label class="h3 text-secondary">Image</label>
+      <input type="text" name="image" class="form-control" required value="{{product.image}}"/></div>
+       <div class="form-group">
+      <label class="h3 text-secondary">Image 2</label>
+      <input type="text" name="image2" class="form-control" required value="{{product.image2}}"/></div>
+    
+     <div class="form-group">
+      <label class="h3 text-secondary">Image 3</label>
+      <input type="text" name="image3" class="form-control" required value="{{product.image3}}"/></div>
+    
+    
+
+<div class="form-group">
+      <label class="h3 text-secondary">Status</label>
+      <input type="number" name="status" class="form-control" required value="{{product.status}}"  /></div>
+<div class="form-group">
+      <label class="h3 text-secondary">Suitable Age</label>
+
+      {{!-- {{#equal product.age "4-6"}}
+      <select class="form-select" name="age" >
+      <option value="4-6" >4-6 years old</option>
+      <option value="6-11">6-11 years old</option>
+      <option value="12">12 years old and up</option>
+      </select> 
+      
+  
+      {{/each}}
+
+       {{#equal product.age "6-11"}}
+      <select class="form-select" name="age" >
+      <option value="4-6" selected>4-6 years old</option>
+      <option value="6-11">6-11 years old</option>
+      <option value="12">12 years old and up</option>
+      </select>
+      {{/each}} --}}
+
+    {{#equal product.age 12}}
+      <select class="form-select" name="age" >
+      <option value="4-6">4-6 years old</option>
+      <option value="6-11">6-11 years old</option>
+      <option value="12" selected>12 years old and up</option>
+      </select>
+      {{/each}}
+
+
+
+<div class="form-group">
+      <label class="h3 text-secondary">Material of product</label>
+      {{!-- {{#each product.material "Hard plastic"}} --}}
+      <select class="form-select" name="material" >
+      <option value="Hard plastic" >Hard plastic</option>
+      <option value="Soft plastic">Soft plastic</option>
+      <option value="Rubber">Rubber</option>
+      </select>
+      {{!-- {{/each}} --}}
+      
+        {{!-- {{#each product.material "Soft plastic"}}
+      <select class="form-select" name="material" >
+      <option value="Hard plastic" >Hard plastic</option>
+      <option value="Soft plastic" selected>Soft plastic</option>
+      <option value="Rubber">Rubber</option>
+      </select>
+      {{/each}}
+      {{#each product.material "Rubber"}}
+      <select class="form-select" name="material" >
+      <option value="Hard plastic" >Hard plastic</option>
+      <option value="Soft plastic">Soft plastic</option>
+      <option value="Rubber" selected>Rubber</option>
+      </select>
+      {{/each}} --}}
+     
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary mt-3" value="Add" /></div>
+  </form>
+</div>

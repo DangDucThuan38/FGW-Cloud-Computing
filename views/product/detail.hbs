@@ -1,0 +1,78 @@
+<div class="container col-md-8 mt-3">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{product.image}}" width="250" height="250" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{product.image2}}" width="250" height="250" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{product.image3}}" width="250" height="250" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+        {{!-- <img src="{{product.image}}" width="250" height="250" /> --}}
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text text-primary text-center">{{student.name}} </h1>
+        </div>
+
+        <div class="card-body">
+                        <h2 colspan="2" class="text text-bg-info text-center">Produc Details </h2>
+          <table class="table table-bordered ">
+            <tr>
+
+         </tr>
+
+            <tr>
+              <th>Name</th>
+              <th>{{product.name}}</th>
+            </tr>
+             <tr>
+              <th>Price product</th>
+              <th>{{product.price}}$</th>
+            </tr>
+             <tr>
+              <th>Made in</th>
+              <th>{{product.made}}</th>
+            </tr>
+             <tr>
+              <th>Date of manufacture</th>
+              <th>{{ dateFormat product.date "DD-MM-YYYY"}}</th>
+            </tr>
+             <tr>
+              <th>Status</th>
+              <th>{{product.status}}</th>
+            </tr>
+             <tr>
+              <th>Material</th>
+              <th>{{product.material}}</th>
+            </tr>
+             <tr>
+              <th>Suitable age</th>
+              <th>{{product.age}}</th>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
