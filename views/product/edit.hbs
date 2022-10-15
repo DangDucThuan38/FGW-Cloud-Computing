@@ -36,62 +36,33 @@
 <div class="form-group">
       <label class="h3 text-secondary">Status</label>
       <input type="number" name="status" class="form-control" required value="{{product.status}}"  /></div>
-<div class="form-group">
-      <label class="h3 text-secondary">Suitable Age</label>
 
-      {{!-- {{#equal product.age "4-6"}}
-      <select class="form-select" name="age" >
-      <option value="4-6" >4-6 years old</option>
-      <option value="6-11">6-11 years old</option>
-      <option value="12">12 years old and up</option>
-      </select> 
-      
-  
-      {{/each}}
-
-       {{#equal product.age "6-11"}}
-      <select class="form-select" name="age" >
-      <option value="4-6" selected>4-6 years old</option>
-      <option value="6-11">6-11 years old</option>
-      <option value="12">12 years old and up</option>
-      </select>
-      {{/each}} --}}
-
-    {{#equal product.age 12}}
-      <select class="form-select" name="age" >
-      <option value="4-6">4-6 years old</option>
-      <option value="6-11">6-11 years old</option>
-      <option value="12" selected>12 years old and up</option>
-      </select>
-      {{/each}}
 
 
 
 <div class="form-group">
       <label class="h3 text-secondary">Material of product</label>
-      {{!-- {{#each product.material "Hard plastic"}} --}}
-      <select class="form-select" name="material" >
-      <option value="Hard plastic" >Hard plastic</option>
-      <option value="Soft plastic">Soft plastic</option>
-      <option value="Rubber">Rubber</option>
+         <select class="form-select" name="material" >
+           {{#equal product.material "Hard plastic"}}
+           <option value="Hard plastic" selected>Hard plastic</option>
+            <option value="Soft plastic">Soft plastic</option>
+           <option value="Rubber">Rubber</option>
+            {{/equal}}
+            {{#equal product.material "Soft plastic"}}
+            <option value="Hard plastic">Hard plastic</option>
+            <option value="Soft plastic" selected>Soft plastic</option>
+           <option value="Rubber">Rubber</option>
+            {{/equal}}
+            {{#equal product.material "Rubber"}}
+            <option value="Hard plastic">Hard plastic</option>
+            <option value="Soft plastic" >Soft plastic</option>
+           <option value="Rubber" selected>Rubber</option>
+            {{/equal}}
+   
+   
       </select>
-      {{!-- {{/each}} --}}
+</div>
       
-        {{!-- {{#each product.material "Soft plastic"}}
-      <select class="form-select" name="material" >
-      <option value="Hard plastic" >Hard plastic</option>
-      <option value="Soft plastic" selected>Soft plastic</option>
-      <option value="Rubber">Rubber</option>
-      </select>
-      {{/each}}
-      {{#each product.material "Rubber"}}
-      <select class="form-select" name="material" >
-      <option value="Hard plastic" >Hard plastic</option>
-      <option value="Soft plastic">Soft plastic</option>
-      <option value="Rubber" selected>Rubber</option>
-      </select>
-      {{/each}} --}}
-     
     <div class="form-group">
       <input type="submit" class="btn btn-primary mt-3" value="Add" /></div>
   </form>
