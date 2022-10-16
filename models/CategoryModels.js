@@ -3,7 +3,10 @@ const mongoose = require('mongoose')
 var CategorySchema = new mongoose.Schema(
   {
     name: String,
-    image: String
+    image: String,
+    describe:String,
+    toy:String
+
    
    
   },
@@ -13,5 +16,5 @@ var CategorySchema = new mongoose.Schema(
 )
 
 //Note: tham số cuối cùng bắt buộc phải là tên của collection (table) trong DB
-var CategoryModel = mongoose.model('category', ProductSchema, 'category');
+var CategoryModel = mongoose.model('category', CategorySchema, 'category');
 module.exports = CategoryModel

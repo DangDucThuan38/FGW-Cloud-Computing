@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4">
       <div class="card">
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{product.image}}" width="250" height="250" alt="...">
@@ -23,56 +23,53 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+       
 
-
-        {{!-- <img src="{{product.image}}" width="250" height="250" /> --}}
       </div>
     </div>
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">
-          <h1 class="text text-primary text-center">{{student.name}} </h1>
-        </div>
-
-        <div class="card-body">
-                        <h2 colspan="2" class="text text-bg-info text-center">Produc Details </h2>
-          <table class="table table-bordered ">
-            <tr>
-
-         </tr>
- <tr>
-              <th>Code product</th>
-              <th>{{product.code}}</th>
-            </tr>
-            <tr>
-              <th>Name</th>
-              <th>{{product.name}}</th>
-            </tr>
-             <tr>
-              <th>Price product</th>
-              <th>{{product.price}}$</th>
-            </tr>
-             <tr>
-              <th>Made in</th>
-              <th>{{product.made}}</th>
-            </tr>
-             <tr>
-              <th>Date of manufacture</th>
-              <th>{{ dateFormat product.date "DD-MM-YYYY"}}</th>
-            </tr>
-             <tr>
-              <th>Status</th>
-              <th> There are {{product.status}} products left</th>
-            </tr>
-             <tr>
-              <th>Material</th>
-              <th>{{product.material}}</th>
-            </tr>
-          
-            
-          </table>
-        </div>
-      </div>
+      <div class="content-heading"><h3 class="title text-center">The detail information of product</h3></div>
+							<div class="data item content" id="additional" data-role="content">   
+                                 <div class="additional-attributes-wrapper table-wrapper">
+        <table class="data table additional-attributes" id="product-attribute-specs-table">
+            <tbody>
+                                                <tr>
+                        <th class="col label" scope="row">Code Product:</th>
+                        <td class="col data" >{{product.code}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Name Product:</th>
+                        <td class="col data" data-th="Xuất xứ">{{product.name}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Price:</th>
+                        <td class="col data" data-th="Mã VT">{{product.price}}$</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Made in:</th>
+                        <td class="col data" data-th="Thương hiệu">{{product.made}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Date of manufacture:</th>
+                        <td class="col data" data-th="Xuất xứ thương hiệu">{{ dateFormat product.date "DD-MM-YYYY"}}                 </td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Status:</th>
+                        <td class="col data" data-th="Tuổi"> {{product.status}} products </td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Material:</th>
+                        <td class="col data" data-th="Chất liệu">{{product.material}}</td>
+                    </tr>
+                           
+                                        </tbody>
+        </table>
+    </div>
+</div>
+																																																			</div>
+				</div>
+	</div>
     </div>
   </div>
 </div>
