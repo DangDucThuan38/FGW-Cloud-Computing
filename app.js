@@ -9,6 +9,7 @@ var logger = require('morgan');
 var productRouter = require('./routes/product')
 var categoryRouter = require('./routes/category')
 
+
 var app = express();
 
 
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', indexRouter);
 app.use('/',productRouter);
 app.use('/category',categoryRouter);
+
 
 var hbs = require('hbs');
 hbs.registerHelper('dateFormat', require('handlebars-dateformat'));

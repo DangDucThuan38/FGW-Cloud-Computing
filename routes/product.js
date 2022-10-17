@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
   ProductModel.find((err, data) => {
     if (!err) {
       //res.send(data)
-      //render ra trang index ở thư mục views/student
       res.render('index', { product: data })
     }
   })

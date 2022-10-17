@@ -68,8 +68,49 @@
    
       </select>
 </div>
-      
+<div class="form-group">
+      <label class="h5 text-secondary">Brand</label>
+      <select class="form-select" name="brand" >
+        {{#equal product.brand "Lego"}}
+      <option value="Lego" selected>Lego</option>
+      <option value="Antona">Antona</option>
+      <option value="Munchkin">Munchkin</option>
+      <option value="Hasbro">Hasbro</option>
+      <option value="Mattel">Mattel</option>
+      {{/equal }}
+       {{#equal product.brand "Antona"}}
+      <option value="Lego" >Lego</option>
+      <option value="Antona" selected>Antona</option>
+      <option value="Munchkin">Munchkin</option>
+      <option value="Hasbro">Hasbro</option>
+      <option value="Mattel">Mattel</option>
+      {{/equal }}
+       {{#equal product.brand "Munchkin"}}
+      <option value="Lego" >Lego</option>
+      <option value="Antona">Antona</option>
+      <option value="Munchkin" selected>Munchkin</option>
+      <option value="Hasbro">Hasbro</option>
+      <option value="Mattel">Mattel</option>
+      {{/equal }}
+       {{#equal product.brand "Hasbro"}}
+      <option value="Lego">Lego</option>
+      <option value="Antona">Antona</option>
+      <option value="Munchkin">Munchkin</option>
+      <option value="Hasbro" selected>Hasbro</option>
+      <option value="Mattel">Mattel</option>
+      {{/equal }}
+       {{#equal product.brand "Mattel"}}
+      <option value="Lego">Lego</option>
+      <option value="Antona">Antona</option>
+      <option value="Munchkin">Munchkin</option>
+      <option value="Hasbro">Hasbro</option>
+      <option value="Mattel" selected>Mattel</option>
+      {{/equal }}
+    
+</div>
+
+
     <div class="form-group">
-      <input type="submit" class="btn btn-primary mt-3" value="Add" /></div>
+      <input type="submit" class="btn btn-primary mt-3" value="Edit" /></div>
   </form>
 </div>
