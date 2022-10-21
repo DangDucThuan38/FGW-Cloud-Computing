@@ -8,6 +8,8 @@ var logger = require('morgan');
 //var indexRouter = require('./routes/index');
 var productRouter = require('./routes/product')
 var categoryRouter = require('./routes/category')
+var boyRouter= require('./routes/boy');
+var girlRouter = require('./routes/girl')
 
 
 var app = express();
@@ -15,9 +17,9 @@ var app = express();
 
 
 var mongoose = require("mongoose");
-var url="mongodb+srv://Dangthuan38:Thuan0308*@cluster0.0terhnf.mongodb.net/project1644";
+//var url="mongodb+srv://Dangthuan38:Thuan0308*@cluster0.0terhnf.mongodb.net/project1644";
 
-//var url="mongodb://127.0.0.1:27017/project";
+var url="mongodb://127.0.0.1:27017/project";
 mongoose.connect(url, { useNewUrlParser: true }, (err) => {
   if (err) {
     console.log(err);
@@ -42,6 +44,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/', indexRouter);
 app.use('/',productRouter);
 app.use('/category',categoryRouter);
+app.use('/boy',boyRouter);
+app.use('/girl',girlRouter);
+
+
 
 
 var hbs = require('hbs');

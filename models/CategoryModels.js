@@ -4,8 +4,7 @@ var CategorySchema = new mongoose.Schema(
   {
     name: String,
     image: String,
-    describe:String,
-    toy:String
+    describe:String
 
    
    

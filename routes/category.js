@@ -12,6 +12,15 @@ router.get('/', (req, res) => {
     }
   })
 })
+router.get('/manage', (req, res) => {
+  CategoryModel.find((err, data) => {
+    if (!err) {
+      //res.send(data)
+      //render ra trang index ở thư mục views/category
+      res.render('category/manage', { category: data })
+    }
+  })
+})
 
 
 
@@ -72,30 +81,11 @@ router.get("/delete/:id", (req, res)=>{
  router.post("/search", (req, res) => {
     CategoryModel.find({ name: new RegExp(req.body.name, "i") }, (err, data) => {
       if (!err) {
-        res.render("category/index", { category: data });
+        res.render("category/manage", { category: data });
       }
     });
   });
 
- //Sort product
- router.get("/sort/asc", (req, res) => {
-    CategoryModel.find()
-      .sort({ name: 1 })
-      .exec((err, data) => {
-        if (!err) {
-          res.render("category/index", { category: data });
-        }
-      });
-  });
 
-router.get("/sort/desc", (req, res) => {
-    CategoryModel.find()
-      .sort({ name: -1 })
-      .exec((err, data) => {
-        if (!err) {
-          res.render("category/index", { category: data });
-        }
-      });
-  });
 
 module.exports = router

@@ -1,0 +1,84 @@
+<div class="container col-md-8 mt-3">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{girl.image}}" width="250" height="250" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{girl.image2}}" width="250" height="250" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{girl.image3}}" width="250" height="250" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+       
+
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+      <div class="content-heading"><h3 class="title text-center">The detail information of product</h3></div>
+							<div class="data item content" id="additional" data-role="content">   
+                                 <div class="additional-attributes-wrapper table-wrapper">
+        <table class="data table additional-attributes" id="product-attribute-specs-table">
+            <tbody>
+                                                <tr>
+                        <th class="col label" scope="row">Code Product:</th>
+                        <td class="col data" >{{girl.code}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Name Product:</th>
+                        <td class="col data" data-th="Xuất xứ">{{girl.name}}</td>
+                    </tr>
+                                              <tr>
+                        <th class="col label" scope="row">Brand:</th>
+                        <td class="col data" data-th="Xuất xứ">{{girl.brand}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Price:</th>
+                        <td class="col data" data-th="Mã VT">{{girl.price}}$</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Made in:</th>
+                        <td class="col data" data-th="Thương hiệu">{{girl.made}}</td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Date of manufacture:</th>
+                        <td class="col data" data-th="Xuất xứ thương hiệu">{{ dateFormat girl.date "DD-MM-YYYY"}}                 </td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Status:</th>
+                        <td class="col data" data-th="Tuổi"> {{girl.status}} products </td>
+                    </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Material:</th>
+                        <td class="col data" data-th="Chất liệu">{{girl.material}}</td>
+                    </tr>
+                     </tr>
+                                                                <tr>
+                        <th class="col label" scope="row">Suitable age:</th>
+                        <td class="col data" data-th="Chất liệu">{{girl.age}}</td>
+                    </tr>
+                           
+                                        </tbody>
+        </table>
+    </div>
+</div>
+																																																			</div>
+				</div>
+	</div>
+    </div>
+  </div>
+</div>
