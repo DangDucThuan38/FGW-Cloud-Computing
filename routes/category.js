@@ -45,7 +45,7 @@ router.post("/add", (req, res) => {
   var category = new CategoryModel(req.body);
   category.save((err) => {
     if (!err) {
-      res.redirect("/category");
+      res.redirect("/category/manage");
     }
   });
 });
@@ -63,7 +63,7 @@ router.post("/edit/:id", (req, res) => {
    CategoryModel.findByIdAndUpdate(req.params.id, req.body, (err) => {
      if (!err) {
        console.log("Edit product succeed !")
-       res.redirect("/category")
+       res.redirect("/category/manage")
      }
    })
 })
@@ -72,7 +72,7 @@ router.get("/delete/:id", (req, res)=>{
     CategoryModel.findByIdAndDelete(req.params.id, (err)=>{
         if(!err){
             console.log("Delete Success");
-            res.redirect("/category");
+            res.redirect("/category/manage");
         }
     } );
 });

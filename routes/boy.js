@@ -46,7 +46,7 @@ router.post("/add", (req, res) => {
   var boy = new BoyModel(req.body);
   boy.save((err) => {
     if (!err) {
-      res.redirect("/boy");
+      res.redirect("/boy/manage");
     }
   });
 });
@@ -63,7 +63,7 @@ router.get("/edit/:id", (req, res) => {
 router.post("/edit/:id", (req, res) => {
    BoyModel.findByIdAndUpdate(req.params.id, req.body, (err) => {
      if (!err) {
-       res.redirect("/boy")
+       res.redirect("/boy/manage")
      }
    })
 })
@@ -72,7 +72,7 @@ router.get("/delete/:id", (req, res)=>{
     BoyModel.findByIdAndDelete(req.params.id, (err)=>{
         if(!err){
             console.log("Delete Success");
-            res.redirect("/boy");
+            res.redirect("/boy/manage");
         }
     } );
 });

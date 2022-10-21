@@ -44,7 +44,7 @@ router.post("/add", (req, res) => {
   var boy = new GirlModel(req.body);
   boy.save((err) => {
     if (!err) {
-      res.redirect("/girl");
+      res.redirect("/girl/manage");
     }
   });
 });
@@ -61,7 +61,7 @@ router.get("/edit/:id", (req, res) => {
 router.post("/edit/:id", (req, res) => {
    GirlModel.findByIdAndUpdate(req.params.id, req.body, (err) => {
      if (!err) {
-       res.redirect("/girl")
+       res.redirect("/girl/manage")
      }
    })
 })
@@ -70,7 +70,7 @@ router.get("/delete/:id", (req, res)=>{
     GirlModel.findByIdAndDelete(req.params.id, (err)=>{
         if(!err){
             console.log("Delete Success");
-            res.redirect("/girl");
+            res.redirect("/girl/manage");
         }
     } );
 });
