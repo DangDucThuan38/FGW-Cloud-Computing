@@ -3,8 +3,6 @@ const BoyModel = require('../models/BoyModels')
 var router = express.Router();
 
 
-
-
 router.get('/', (req, res) => {
   BoyModel.find((err, data) => {
     if (!err) {
@@ -13,6 +11,9 @@ router.get('/', (req, res) => {
     }
   })
 })
+
+
+
 
 
 router.get('/manage', (req, res) => {

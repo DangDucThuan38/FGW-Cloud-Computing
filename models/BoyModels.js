@@ -13,7 +13,8 @@ var BoySchema = new mongoose.Schema(
     image2: String,
     image3: String,
     code:String,
-    age:String
+    age:String,
+    color:String
    
   },
   {
